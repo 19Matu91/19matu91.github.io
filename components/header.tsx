@@ -17,7 +17,7 @@ export function Header() {
         <div className="flex h-28 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <DragonIcon className="h-20 w-20 text-primary" />
-            <div className="text-4xl font-semibold text-primary" style={{ fontFamily: "var(--font-frank-ruhl-libre)" }}>
+            <div className="text-4xl font-semibold text-primary" style={{ fontFamily: "var(--font-frank)" }}>
               {texts.common.clubName}
             </div>
           </Link>

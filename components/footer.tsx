@@ -29,7 +29,7 @@ export function Footer() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <DragonIcon className="h-11 w-11 text-background" />
-              <h3 className="text-3xl font-semibold text-background mb-6" style={{ fontFamily: "var(--font-trajan)" }}>
+              <h3 className="text-3xl font-semibold text-background mb-6" style={{ fontFamily: "var(--font-frank)" }}>
                 {texts.common.clubName}
               </h3>
             </div>
@@ -65,7 +65,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border text-center text-lg text-muted-foreground">
           <p className="text-background">
             &copy; {new Date().getFullYear()}{" "}
-            <span style={{ fontFamily: "var(--font-trajan)" }}>{texts.common.clubName}</span>. {texts.common.copyright}
+            <span style={{ fontFamily: "var(--font-frank)" }}>{texts.common.clubName}</span>. {texts.common.copyright}
           </p>
         </div>
       </div>

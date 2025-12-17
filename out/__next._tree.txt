@@ -1,4 +1,6 @@
-:HL["/_next/static/chunks/50637b6fdef79ccf.css","style"]
+:HL["/_next/static/chunks/bc270b6641a4d700.css","style"]
+:HL["/_next/static/chunks/f3b16fec4db41c68.css","style"]
+:HL["/_next/static/media/3358da98c8802dfe-s.p.29434ace.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/3a5de739eb553306-s.p.b7d5b365.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/5ee884228e72c58d-s.p.0ed6c6c7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/board-game-club-event-with-people-playing-games.jpg","image"]
@@ -8,4 +10,4 @@
 :HL["/board-games-event-photo-.jpg?height=400&width=400&query=board games event photo 4","image"]
 :HL["/board-games-event-photo-.jpg?height=400&width=400&query=board games event photo 5","image"]
 :HL["/board-games-event-photo-.jpg?height=400&width=400&query=board games event photo 6","image"]
-0:{"buildId":"1btQTVGx9_l9LQBdUnjff","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"5lWFMPTHioTVteDftNjBY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
