@@ -187,30 +187,15 @@
     "benefits": {
       "title": "Beneficios de ser socio",
       "items": [
-        {
-          "title": "Uso regular",
-          "description": "De la sede y ludoteca"
-        },
-        {
-          "title": "Telegram de socios",
-          "description": "Para organizar partidas"
-        },
-        {
-          "title": "Voz y voto",
-          "description": "En decisiones y grupos de trabajo"
-        },
-        {
-          "title": "Llaves a los 6 meses",
-          "description": "Acceso independiente al club"
-        },
-        {
-          "title": "Descuentos",
-          "description": "En tiendas colaboradoras"
-        },
-        {
-          "title": "Eventos exclusivos",
-          "description": "Torneos, demos y viajes"
-        }
+        "Uso regular de la sede y ludoteca.",
+        "Acceso a prestamo de juegos.",
+        "Telegram de socios para compartir ideas, debatir y votar.",
+        "Voz y voto en decisiones de las asambleas y grupos de trabajo.",
+        "Llaves a los 6 meses.",
+        "Descuentos en tiendas colaboradoras.",
+        "Organizar torneos, eventos y demos.",
+        "Participación en los clubfundings.",
+        "Contacto con personas de intereses afines con las que organizar otras actividades fuera del ámbito de los juegos de mesa."
       ]
     },
     "cta": {

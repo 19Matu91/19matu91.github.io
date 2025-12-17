@@ -112,41 +112,32 @@ export default function SocioPage() {
         </section>
 
         {/* Benefits */}
-        <section className={`${SPACING.section} bg-muted/50`}>
+        <section className={`${SPACING.section}  bg-accent `}>
           <div className={SPACING.container}>
             <h2
-              className={`text-5xl md:text-6xl font-bold ${SPACING.headingMargin} text-center text-balance font-display`}
+              className={`text-5xl md:text-6xl font-bold ${SPACING.headingMargin} text-center text-primary font-display`}
             >
               {texts.member.benefits.title}
             </h2>
 
             <div className={`grid md:grid-cols-2 lg:grid-cols-3 ${SPACING.itemsGap} ${SPACING.maxWidthWide}`}>
               {texts.member.benefits.items.map((benefit, i) => {
-                const iconMap: Record<string, any> = {
-                  "Uso regular": Users,
-                  "Telegram de socios": MessageCircle,
-                  "Voz y voto": CheckCircle,
-                  "Llaves a los 6 meses": Key,
-                  Descuentos: Tag,
-                  "Eventos exclusivos": Trophy,
-                }
-                const Icon = iconMap[benefit.title] || CheckCircle
                 return (
-                  <Card key={i}>
-                    <CardContent className={`${SPACING.cardPadding} text-center`}>
-                      <Icon className="h-16 w-16 text-primary mx-auto mb-4" />
-                      <h3 className={`font-semibold text-2xl ${SPACING.smallMargin} font-display`}>{benefit.title}</h3>
-                      <p className="text-xl text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  <Card key={i} className="bg-background">
+                    <CardContent className={`${SPACING.cardPadding} flex flex-col items-center text-center`}>
+                      <MeepleIcon className="h-8 w-8 text-accent mb-2" />
+                      <p className="text-xl leading-relaxed"> {benefit}</p>
                     </CardContent>
                   </Card>
                 )
               })}
             </div>
-          </div>
-        </section>
+          </div >
+        </section >
 
         {/* CTA Section */}
-        <section className={`${SPACING.section} bg-secondary`}>
+        < section className={`${SPACING.section} bg-secondary`
+        }>
           <div className={`${SPACING.container} text-center`}>
             <h2 className={`text-5xl md:text-6xl font-bold ${SPACING.smallMargin} text-background font-display`}>
               {texts.member.cta.title}
@@ -166,8 +157,8 @@ export default function SocioPage() {
               </a>
             </Button>
           </div>
-        </section>
-      </main>
+        </section >
+      </main >
 
       <Footer />
     </div >
