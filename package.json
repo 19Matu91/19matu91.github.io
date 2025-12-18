@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "deploy": "next build && gh-pages -d out",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start",
-    "deploy": "next build && gh-pages -d out"
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
