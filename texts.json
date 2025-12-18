@@ -13,6 +13,7 @@
   },
   "navigation": {
     "home": "Inicio",
+    "calendar": "Calendario de actividades",
     "club": "Nuestro Club",
     "member": "Ser Socio",
     "memberArea": "Area de Socios",
@@ -37,7 +38,7 @@
       "steps": [
         "Entra en Whatsapp y preséntate.",
         "Mira el calendario de actividades.",
-        "Pregunta por el grupo si te puedes unir al evento o partida"
+        "Pregunta por el grupo si te puedes unir al evento o partida."
       ]
     },
     "calendar": {
@@ -69,7 +70,13 @@
         },
         {
           "question": "¿Puedo ir si hay partidas pero no estoy apuntado?",
-          "answer": "Lo mejor es que vengas apuntado. Tenemos eventos periódicamente con muchas plazas para que puedas venir. Si no te coincide el horario puedes pedir una partida por WhatsApp. Aún así, alguien te atenderá y resolverá tus dudas mientras echas un vistazo."
+          "answer": "Debes venir apuntado. Tenemos eventos periódicamente con muchas plazas para que puedas venir. Si no te coincide el horario puedes pedir una partida por WhatsApp. Aún así, alguien te atenderá y resolverá tus dudas mientras echas un vistazo."
+        },
+        {
+          "question": "¿Jugáis a rol?",
+          "answer": "Si claro, tenemos un grupo de rol en Telegram abierto a todo el mundo. Entra y pregunta.",
+          "button_text": "Grupo rol Telegram",
+          "button_href": "https://t.me/+1Vs9bN_8LR42MTNk"
         },
         {
           "question": "¿A qué juegos jugáis?",
@@ -90,18 +97,18 @@
   "club": {
     "hero": {
       "title": "COMPARTIMOS TU AFICIÓN POR LOS JUEGOS DE MESA EN GRANADA",
-      "subtitle": "Somos una asociación cultural sin ánimo de lucro que promueve el ocio saludable a través de los juegos de mesa... y mucho más. Nos une el buen ambiente, enseñar a quien empieza y hacer muchos amigos.",
+      "subtitle": "Somos una asociación cultural sin ánimo de lucro que promueve el ocio saludable a través de los juegos de mesa... y mucho más. Nos une el buen ambiente, enseñar a quien empieza y hacer muchas amistades.",
       "imageAlt": "Club vacío con estanterías"
     },
     "features": {
       "text1": "Somos una asociación cultural sin ánimo de lucro que promueve el ocio saludable a través de los juegos de mesa… y mucho más.",
-      "text2": "Nos une el buen ambiente, enseñar a quien empieza y hacer muchos amigos.",
+      "text2": "Nos une el buen ambiente, enseñar a quien empieza y hacer muchas amistades.",
       "title": "Nuestros valores"
     },
     "rules": {
       "voluntariado": {
-        "title": "Voluntariado.",
-        "subtitle": "El club lo construimos entre todos y todas:",
+        "title": "Voluntariado",
+        "subtitle": "El club lo construimos juntos:",
         "items": [
           "Repartimos las tareas.",
           "Aportamos tiempo y habilidades.",
@@ -111,7 +118,7 @@
         ]
       },
       "convivencia": {
-        "title": "Convivencia.",
+        "title": "Convivencia",
         "subtitle": "Respeto ante todo.",
         "items": [
           "Cuidamos que todo el mundo este cómodo.",
@@ -178,7 +185,7 @@
           "items": [
             "Matrícula 15€ (reembolsable si causas baja).",
             "Cuota 15 €/mes.",
-            "Plan familiar: +5€ cónyuge y +5€ por cada hijo mayor de 18 años."
+            "Plan familiar: +5€ cónyuge e hijos mayores de 18. Menores sin coste."
           ],
           "description": ""
         }
@@ -248,5 +255,17 @@
   "footer": {
     "contact": "Contacto",
     "follow": "Síguenos"
+  },
+  "ludoteca": {
+    "tableTitle": "Listado de Juegos",
+    "loading": "Cargando juegos...",
+    "error": "No se pudieron cargar los juegos",
+    "searchPlaceholder": "Buscar juego...",
+    "clearSearch": "Limpiar búsqueda",
+    "noResults": "No se encontraron juegos que coincidan con \"{searchTerm}\"",
+    "showing": "Mostrando",
+    "of": "de",
+    "games": "juegos",
+    "total": "Total de juegos"
   }
 }
