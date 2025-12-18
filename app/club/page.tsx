@@ -2,9 +2,12 @@ import { Header } from "@/components/header"
 import { MeepleIcon } from "@/components/meeple-icon"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { PageHero } from "@/components/ui/page-hero"
+import { SectionHeading } from "@/components/ui/section-heading"
 import Link from "next/link"
 import texts from "@/texts.json"
 import { SPACING } from "@/lib/constants"
+import { LudotecaTable } from "@/components/ui/ludoteca-table"
 
 export default function ClubPage() {
   return (
@@ -13,43 +16,37 @@ export default function ClubPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className={`${SPACING.section} bg-secondary text-background opacity-100`}>
-          <div className={`${SPACING.container} text-center`}>
-            <h1 className="text-6xl md:text-7xl font-bold text-balance leading-tight font-display lg:text-6xl">
-              {texts.club.hero.title}
-            </h1>
-          </div>
-        </section>
+        <PageHero title={texts.club.hero.title} />
 
         {/* Club Features */}
         <section className={`${SPACING.section} bg-muted/50`}>
           <div className={SPACING.container}>
             <p
-              className={`text-3xl text-center text-balance ${SPACING.headingMargin} ${SPACING.maxWidthNarrow} leading-relaxed`}
+              className={`text-xl sm:text-2xl md:text-3xl text-center text-balance ${SPACING.headingMargin} ${SPACING.maxWidthNarrow} leading-relaxed px-4`}
             >
               {texts.club.features.text1}
             </p>
             <p
-              className={`text-3xl text-center text-balance ${SPACING.headingMargin} ${SPACING.maxWidthNarrow} leading-relaxed`}
+              className={`text-xl sm:text-2xl md:text-3xl text-center text-balance ${SPACING.headingMargin} ${SPACING.maxWidthNarrow} leading-relaxed px-4`}
             >
               {texts.club.features.text2}
             </p>
-            <h2
-              className={`text-6xl md:text-7xl font-bold ${SPACING.headingMargin} text-center text-balance font-display mb-8`}
-            >
-              {texts.club.features.title}
-            </h2>
+            <SectionHeading>{texts.club.features.title}</SectionHeading>
 
-            <div className={`grid md:grid-cols-2 ${SPACING.itemsGap} ${SPACING.maxWidthWide} mt-16`}>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <MeepleIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-4xl font-bold font-display mb-6">{texts.club.rules.voluntariado.title}</h3>
+            <div
+              className={`grid md:grid-cols-2 gap-6 sm:gap-8 md:${SPACING.itemsGap} ${SPACING.maxWidthWide} mt-12 sm:mt-14 md:mt-16`}
+            >
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <MeepleIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-primary" />
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display mb-4 sm:mb-5 md:mb-6">
+                    {texts.club.rules.voluntariado.title}
+                  </h3>
                 </div>
-                <p className="text-xl font-medium">{texts.club.rules.voluntariado.subtitle}</p>
+                <p className="text-base sm:text-lg md:text-xl font-medium">{texts.club.rules.voluntariado.subtitle}</p>
                 <ul className="space-y-2">
                   {texts.club.rules.voluntariado.items.map((item: string, i: number) => (
-                    <li key={i} className="text-lg text-balance flex gap-2">
+                    <li key={i} className="text-sm sm:text-base md:text-lg text-balance flex gap-2">
                       <span>-</span>
                       <span>{item}</span>
                     </li>
@@ -57,15 +54,17 @@ export default function ClubPage() {
                 </ul>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <MeepleIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-4xl font-bold font-display mb-6">{texts.club.rules.convivencia.title}</h3>
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <MeepleIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-primary" />
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display mb-4 sm:mb-5 md:mb-6">
+                    {texts.club.rules.convivencia.title}
+                  </h3>
                 </div>
-                <p className="text-xl font-medium">{texts.club.rules.convivencia.subtitle}</p>
+                <p className="text-base sm:text-lg md:text-xl font-medium">{texts.club.rules.convivencia.subtitle}</p>
                 <ul className="space-y-2">
                   {texts.club.rules.convivencia.items.map((item: string, i: number) => (
-                    <li key={i} className="text-lg text-balance flex gap-2">
+                    <li key={i} className="text-sm sm:text-base md:text-lg text-balance flex gap-2">
                       <span>-</span>
                       <span>{item}</span>
                     </li>
@@ -79,12 +78,8 @@ export default function ClubPage() {
         {/* Local Section */}
         <section className={`${SPACING.section} bg-accent`}>
           <div className={SPACING.container}>
-            <h2
-              className={`text-6xl text-primary md:text-7xl font-bold ${SPACING.subheadingMargin} text-center text-balance font-display mb-8`}
-            >
-              {texts.club.local.title}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <SectionHeading className="text-primary">{texts.club.local.title}</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center max-w-6xl mx-auto">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/empty-board-game-club-with-shelves-and-spacious-ro.jpg"
@@ -92,12 +87,12 @@ export default function ClubPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="space-y-8">
-                <p className="text-3xl leading-tight">{texts.club.local.subtitle}</p>
-                <ul className="space-y-4">
+              <div className="space-y-6 sm:space-y-8 px-4">
+                <p className="text-xl sm:text-2xl md:text-3xl leading-tight">{texts.club.local.subtitle}</p>
+                <ul className="space-y-3 sm:space-y-4">
                   {texts.club.local.items.map((item: string, i: number) => (
-                    <li key={i} className="flex gap-3 items-center text-xl font-bold">
-                      <MeepleIcon className="h-6 w-6 shrink-0" />
+                    <li key={i} className="flex gap-2 sm:gap-3 items-center text-base sm:text-lg md:text-xl font-bold">
+                      <MeepleIcon className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -110,13 +105,8 @@ export default function ClubPage() {
         {/* Map Section */}
         <section className={`${SPACING.section} bg-secondary text-primary-foreground`}>
           <div className={SPACING.container}>
-            <h2
-              className={`text-6xl md:text-7xl font-bold ${SPACING.subheadingMargin} text-center text-balance font-display mb-8`}
-            >
-              {texts.club.location.title}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-              {/* Map */}
+            <SectionHeading>{texts.club.location.title}</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-6xl mx-auto">
               <div className="aspect-video bg-muted rounded-xl overflow-hidden border-2 border-primary-foreground/20 shadow-xl">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.089!2d-3.614!3d37.177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDEwJzM3LjIiTiAzwrAzNic1MC40Ilc!5e0!3m2!1ses!2ses!4v1234567890"
@@ -129,19 +119,17 @@ export default function ClubPage() {
                 />
               </div>
 
-              {/* Info */}
-              <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
-                <div className="space-y-2">
-                  <p className="text-3xl opacity-90">{texts.club.location.postalTitle}</p>
-                  <p className="text-3xl">{texts.common.clubName}</p>
-                  <p className="text-3xl">{texts.common.address.street}</p>
-                  <p className="text-3xl">{texts.common.address.city}</p>
+              <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 sm:space-y-8 px-4">
+                <div className="space-y-1 sm:space-y-2">
+                  <p className="text-xl sm:text-2xl md:text-3xl">{texts.common.clubName}</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl">{texts.common.address.street}</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl">{texts.common.address.city}</p>
                 </div>
 
                 <Button
                   size="lg"
                   asChild
-                  className="text-2xl bg-background text-secondary rounded-full border-0 p-6 font-display "
+                  className="text-lg sm:text-xl md:text-2xl bg-background text-secondary rounded-full border-0 px-5 py-4 sm:px-6 sm:py-5 md:p-6 font-display w-full sm:w-auto"
                 >
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Pepita+Serrador+3,+Granada"
@@ -159,57 +147,50 @@ export default function ClubPage() {
         {/* Ludoteca Section */}
         <section className={SPACING.section}>
           <div className={`${SPACING.container} flex flex-col items-center`}>
-            <h2 className={`text-6xl md:text-7xl ${SPACING.paragraphMargin}  font-display mb-8`}>
-              {texts.club.library.title}
-            </h2>
-            <div className={`${SPACING.maxWidthNarrow} space-y-4 mb-12`}>
-              <p className="text-xl leading-relaxed">{texts.club.library.subtitle}</p>
-              <p className="text-xl leading-relaxed">{texts.club.library.description}</p>
-              <p className="text-xl font-medium mt-8">{texts.club.library.tableNote}</p>
+            <SectionHeading>{texts.club.library.title}</SectionHeading>
+            <div className={`${SPACING.maxWidthNarrow} space-y-3 sm:space-y-4 mb-8 sm:mb-10 md:mb-12 px-4`}>
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed">{texts.club.library.subtitle}</p>
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed">{texts.club.library.description}</p>
+              <p className="text-base sm:text-lg md:text-xl font-medium mt-6 sm:mt-8">{texts.club.library.tableNote}</p>
             </div>
 
-            {/* Table Placeholder */}
-            <div className="w-full max-w-5xl border-2 border-muted rounded-lg h-[600px] bg-muted/10 mb-16 relative overflow-hidden">
-              <div className="absolute inset-0 flex flex-col">
-                {Array.from({ length: 15 }).map((_, i) => (
-                  <div key={i} className="flex-1 border-b border-muted/50 w-full" />
-                ))}
-              </div>
-            </div>
+            <LudotecaTable />
 
-            <div className={`${SPACING.maxWidthNarrow}`}>
-              <h3 className={`text-4xl font-bold ${SPACING.smallMargin} text-balance mb-6`}>
+            <div className={`${SPACING.maxWidthNarrow} px-4 mt-12 sm:mt-14 md:mt-16`}>
+              <h3
+                className={`text-2xl sm:text-3xl md:text-4xl font-bold ${SPACING.smallMargin} text-balance mb-4 sm:mb-5 md:mb-6 text-center`}
+              >
                 {texts.club.library.moreGames.title}
               </h3>
-              <p className={`text-xl ${SPACING.paragraphMargin} leading-relaxed`}>
+              <p className={`text-base sm:text-lg md:text-xl ${SPACING.paragraphMargin} leading-relaxed text-center`}>
                 {texts.club.library.moreGames.description}
               </p>
-              <Button
-                size="lg"
-                asChild
-                className="font-display bg-secondary text-white hover:bg-secondary/90 text-2xl px-10 py-7 rounded-full shadow-lg transition-transform hover:scale-105"
-              >
-                <a href="https://chat.whatsapp.com/G9Q7y7y7y7y7y7y7y7y7y7" target="_blank" rel="noopener noreferrer">
-                  {texts.common.whatsappGroup}
-                </a>
-              </Button>
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  asChild
+                  className="font-display bg-secondary text-white hover:bg-secondary/90 text-lg sm:text-xl md:text-2xl px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-lg transition-transform hover:scale-105 w-full sm:w-auto"
+                >
+                  <a href="https://chat.whatsapp.com/G9Q7y7y7y7y7y7y7y7y7y7" target="_blank" rel="noopener noreferrer">
+                    {texts.common.whatsappGroup}
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className={`${SPACING.section} bg-muted/50 bg-secondary`}>
-          <div className={`${SPACING.container} text-center`}>
-            <h2
-              className={`text-6xl md:text-7xl font-bold ${SPACING.smallMargin} text-center text-background font-display mb-8`}
-            >
-              {texts.club.cta.title}
-            </h2>
-            <p className={`text-xl text-background ${SPACING.subheadingMargin}`}>{texts.club.cta.subtitle}</p>
+          <div className={`${SPACING.container} text-center px-4`}>
+            <SectionHeading className="text-background">{texts.club.cta.title}</SectionHeading>
+            <p className={`text-base sm:text-lg md:text-xl text-background ${SPACING.subheadingMargin}`}>
+              {texts.club.cta.subtitle}
+            </p>
             <Button
               size="lg"
               asChild
-              className="text-2xl text-secondary rounded-full border-0 p-6 font-display bg-background"
+              className="text-lg sm:text-xl md:text-2xl text-secondary rounded-full border-0 px-5 py-4 sm:px-6 sm:py-5 md:p-6 font-display bg-background w-full sm:w-auto"
             >
               <Link href="/socio">{texts.club.cta.button}</Link>
             </Button>
